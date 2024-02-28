@@ -1,0 +1,50 @@
+.interface {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.logo img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ESTILO DO CABEÇALHO */
+
+header{
+  padding: 40px 4%;
+}
+
+header > .interface{
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+header a{
+  color: #003752;
+  font-weight: 700;
+  text-decoration: none;
+
+}
+header nav ul{
+  list-style-type: none;
+}
+header nav ul li{
+  display: inline-block;
+  padding: 0 40px;
+}
+.btn-pedidos{
+  color: #fff;
+  background-color: #0073AA;
+  padding: 20px 30px;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  border: 0;
+}
+header .menu-desktop{
+  font-size: 20px;
+}
+header .menu-desktop2{
+  font-size: 16px;
+}
