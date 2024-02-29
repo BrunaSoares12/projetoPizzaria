@@ -1,50 +1,78 @@
 .interface {
-  max-width: 1280px;
-  margin: 0 auto;
+  width: 100%;
+  margin: auto;
 }
 
 .logo img {
-  max-width: 100%;
+  display: flex;
+  width: 15rem;
   height: auto;
+  margin: auto;
 }
 
 /* ESTILO DO CABEÇALHO */
 
-header{
-  padding: 40px 4%;
+header {
+  padding: 15px;
+  height: auto;
+  background-color: #ffe6bf;
 }
 
-header > .interface{
-display: flex;
-align-items: center;
-justify-content: space-between;
+header > .interface {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 15px;
 }
 
-header a{
+header a {
   color: #003752;
   font-weight: 700;
   text-decoration: none;
-
+  position: relative;
 }
-header nav ul{
+header a img {
+  position: absolute;
+  right: 100%;
+  visibility: hidden; /* Inicia as imagens como ocultas */
+  width: 30px;
+  height: 30px;
+}
+header a::after {
+  content: ""; /* Adiciona um conteúdo vazio para o pseudo-elemento */
+  position: absolute; /* Define a posição absoluta para o pseudo-elemento */
+  bottom: 0; /* Posiciona a linha na parte inferior do link */
+  left: 50%; /* Posiciona a linha no centro do texto do link */
+  width: 0; /* Inicia a largura da linha em 0 */
+  height: 2px; /* Define a altura da linha */
+  background-color: #003752; /* Cor da linha */
+  transition: width 0.3s ease, left 0.3s ease; /* Adiciona uma transição suave para a largura e posição da linha */
+}
+header a:hover img {
+  visibility: visible; /* Torna as imagens visíveis quando o cursor passa sobre o link*/
+}
+header a:hover::after {
+  width: 100%; /* Aumenta a largura da linha para 100% */
+  left: 0; /* Move a linha para a esquerda, começando do início do link */
+}
+
+header nav ul {
   list-style-type: none;
 }
-header nav ul li{
+header nav ul li {
   display: inline-block;
   padding: 0 40px;
 }
-.btn-pedidos{
+.btn-pedidos {
   color: #fff;
-  background-color: #0073AA;
-  padding: 20px 30px;
+  background-color: #61172f;
+  padding: 10px 20px;
   font-size: 20px;
   font-weight: 600;
   cursor: pointer;
   border: 0;
+  border-radius: 10px;
 }
-header .menu-desktop{
+header .menu-desktop {
   font-size: 20px;
-}
-header .menu-desktop2{
-  font-size: 16px;
 }
